@@ -19,7 +19,6 @@ merge:
   script: |-
     rspec spec
     echo "Merging!!"
-    echo "some more@@"
   commanders:
   - froy001
 deploy:
