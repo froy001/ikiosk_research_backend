@@ -1,0 +1,7 @@
+      invoke  active_record
+      create    db/migrate/20151005114609_create_questions.rb
+   identical    app/models/question.rb
+      invoke    rspec
+      create      spec/models/question_spec.rb
+      invoke      factory_girl
+      create        spec/factories/questions.rb
