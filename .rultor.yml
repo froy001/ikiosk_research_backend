@@ -1,14 +1,5 @@
 install: |-
-  sudo locale-gen en_US en_US.UTF-8
-  sudo dpkg-reconfigure locales
-  export LC_ALL=en_US.UTF-8
-  export LANG=en_US.UTF-8
-  export LANGUAGE=en_US.UTF-8
-  sudo apt-get install bsdmainutils
-  sudo gem install --no-rdoc --no-ri pdd
-  cd src/bundle
-  bundle install
-  cd ../..
+
 architect:
 - froy001
 assets:
@@ -17,6 +8,7 @@ merge:
   fast-forward: only
   rebase: true
   script: |-
+    git fetch github
     rspec spec
     echo "Merging!!"
   commanders:
