@@ -8,6 +8,8 @@ merge:
   fast-forward: only
   rebase: true
   script: |-
+    bundle
+    rspec spec
     echo "Merging!!"
     echo "some more@@"
   commanders:
