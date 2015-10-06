@@ -8,6 +8,7 @@ merge:
   fast-forward: only
   rebase: true
   script: |-
+    rvm use 2.2.1
     bundle
     rspec spec
     echo "Merging!!"
