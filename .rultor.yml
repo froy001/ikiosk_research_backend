@@ -1,0 +1,28 @@
+install: |-
+
+architect:
+- froy001
+assets:
+
+merge:
+  fast-forward: only
+  rebase: true
+  script: |-
+    git fetch github
+    rspec spec
+    echo "Merging!!"
+    echo "some more@@"
+  commanders:
+  - froy001
+deploy:
+  script: |-
+    bundle
+  commanders:
+  - froy001
+env:
+  MAVEN_OPTS: -XX:MaxPermSize=256m -Xmx1g
+release:
+  pre: false
+  script:
+  commanders:
+  - froy001
