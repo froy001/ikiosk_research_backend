@@ -14,5 +14,9 @@ module Features
       fill_in 'Password', with: password
       click_button 'Sign in'
     end
+
+    def sign_up_with_api(email, password, confirmation)
+
+    end
   end
 end
