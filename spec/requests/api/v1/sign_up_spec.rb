@@ -119,10 +119,6 @@ describe 'Sign Up API' do
           expect(json['errors'].to_json).to have_json_size(1).at_path("email")
           expect(json['errors']['email'][0]).to eq("address is already in use")
         end
-
-        it 'has bs' do
-
-        end
       end
     end
   end
