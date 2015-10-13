@@ -10,6 +10,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'geocoder'
 gem 'devise_token_auth'
 gem 'omniauth'
+
 group :development, :test do
   gem 'byebug'
 end
@@ -44,4 +45,5 @@ group :test do
   gem 'database_cleaner'
   gem 'launchy'
   gem 'selenium-webdriver'
+  gem 'json_spec'
 end

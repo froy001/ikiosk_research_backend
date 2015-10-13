@@ -15,8 +15,25 @@ module Features
       click_button 'Sign in'
     end
 
-    def sign_up_with_api(email, password, confirmation)
+  end
+end
 
+module Requests
+  module SessionHelpers
+    def sign_up_with_api(email, password, confirmation)
+      post '/api/v1/auth', {
+                  email: email, password: password,
+                  password_confirmation: confirmation,
+                  confirm_success_url: '/'
+                }
+    end
+
+  end
+
+  module JsonHelpers
+    def json
+      JSON.parse(response.body)
     end
   end
+
 end
