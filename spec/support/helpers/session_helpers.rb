@@ -28,6 +28,22 @@ module Requests
                 }
     end
 
+    def sign_in_with_api(email, password)
+      post '/api/v1/auth/sign_in', {
+                  email: email, password: password
+                }
+    end
+
+    def sign_out_with_api(access_token, token_type, client, uid, expiry)
+      delete '/api/v1/auth/sign_out', {
+        :"access-token" => access_token,
+        :"token-type" => token_type,
+        :client => client,
+        :uid => uid,
+        :expiry => expiry
+      }
+    end
+
   end
 
   module JsonHelpers
